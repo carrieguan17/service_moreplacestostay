@@ -1,4 +1,5 @@
 var Room = require('./database/index_room.js');
+var List = require('./database/index_room.js');
 
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/room', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
@@ -126,14 +127,42 @@ var rooms = [
   })
 ];
 
+var lists = [
+  new List.List({
+    listName: "Summer Trips",
+    numberOfItems: 6
+  }),
+  new List.List({
+    listName: "Europe Trip",
+    numberOfItems: 11
+  }),
+  new List.List({
+    listName: "Thanksgivings",
+    numberOfItems: 2
+  })
+];
+
 var counter = 0;
 for (var i =0; i < rooms.length; i++) {
   rooms[i].save((err, result) => {
     counter += 1;
     if (err) {
-      console.log('Error seeding data')
+      console.log('Error seeding room data')
     } else if (counter === rooms.length) {
-      console.log(`Seeding finished`)
+      console.log(`Seeding room finished`)
+    }
+  });
+}
+
+var listCounter = 0;
+for (var i = 0; i < lists.length; i++) {
+  lists[i].save((err, result) => {
+    listCounter += 1;
+    if (err) {
+      console.log(`Error seeding list data`)
+    } else if (listCounter === lists.length) {
+      exit();
+      console.log(`Seeding list data finished`)
     }
   });
 }

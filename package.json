@@ -6,8 +6,7 @@
   "scripts": {
     "react": "webpack -d --watch",
     "start": "nodemon server/index.js",
-    "data-room": "node room_seeder.js",
-    "data-list": "node list_seeder.js"
+    "data-seed": "node room_seeder.js"
   },
   "author": "Carrie Guan",
   "license": "ISC",

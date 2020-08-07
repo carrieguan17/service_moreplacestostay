@@ -1,5 +1,5 @@
 var Room = require('./database/index_room.js');
-var List = require('./database/index_room.js');
+// var List = require('./database/index_room.js');
 
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/room', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
@@ -128,15 +128,15 @@ var rooms = [
 ];
 
 var lists = [
-  new List.List({
+  new Room.List({
     listName: "Summer Trips",
     numberOfItems: 6
   }),
-  new List.List({
+  new Room.List({
     listName: "Europe Trip",
     numberOfItems: 11
   }),
-  new List.List({
+  new Room.List({
     listName: "Thanksgivings",
     numberOfItems: 2
   })

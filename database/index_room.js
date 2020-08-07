@@ -42,6 +42,7 @@ var getAllRooms = function(callback) {
   });
 }
 
+
 module.exports = {
   Room: Room,
   dbroom: dbroom,

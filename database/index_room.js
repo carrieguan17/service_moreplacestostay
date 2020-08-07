@@ -30,7 +30,6 @@ var getAllRooms = function(callback) {
       console.log(`Error getting rooms info from DB`)
     } else {
       callback(null, rooms)
-      console.log(rooms)
       console.log(`Success getting rooms info from DB`)
     }
   });

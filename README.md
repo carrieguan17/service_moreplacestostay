@@ -12,6 +12,7 @@ Sample JSON data:
         "superHost": false,
         "__v": 0
     },
+
     {
         "_id": "5f2cc1497578a1197a4928c2",
         "roomName": "Beachview Malibu Estate near MariSol",
@@ -23,6 +24,7 @@ Sample JSON data:
         "superHost": false,
         "__v": 0
     },
+
     {
         "_id": "5f2cc1497578a1197a4928c0",
         "roomName": "$45 Million Ocean View Malibu Mansion Sleeps 14",
@@ -34,6 +36,7 @@ Sample JSON data:
         "superHost": false,
         "__v": 0
     },
+
     {
         "_id": "5f2cc1497578a1197a4928c3",
         "roomName": "Petra Manor | Malibu Luxury Mansion",
@@ -45,6 +48,7 @@ Sample JSON data:
         "superHost": true,
         "__v": 0
     },
+
     {
         "_id": "5f2cc1497578a1197a4928c4",
         "roomName": "LOS ANGELES VIEW MODERN ESTATE- POOL- 12,000 SQ FT",
@@ -56,6 +60,7 @@ Sample JSON data:
         "superHost": false,
         "__v": 0
     },
+
     {
         "_id": "5f2cc1497578a1197a4928c5",
         "roomName": "Malibu Estate w/ Ocean View, Pool and Amenities",
@@ -67,6 +72,7 @@ Sample JSON data:
         "superHost": false,
         "__v": 0
     },
+
     {
         "_id": "5f2cc1497578a1197a4928c6",
         "roomName": "Bel Air Gated 1 acre Ralph Lauren Furnished 1 mthm",
@@ -78,6 +84,7 @@ Sample JSON data:
         "superHost": false,
         "__v": 0
     },
+
     {
         "_id": "5f2cc1497578a1197a4928c7",
         "roomName": "Spectacular views",
@@ -89,6 +96,7 @@ Sample JSON data:
         "superHost": true,
         "__v": 0
     },
+
     {
         "_id": "5f2cc1497578a1197a4928c8",
         "roomName": "MALIBU PRESIDENTIAL",
@@ -100,6 +108,7 @@ Sample JSON data:
         "superHost": false,
         "__v": 0
     },
+
     {
         "_id": "5f2cc1497578a1197a4928c1",
         "roomName": "Elegance at the Beach by stayLA Luxury Rentals",
@@ -111,6 +120,7 @@ Sample JSON data:
         "superHost": false,
         "__v": 0
     },
+
     {
         "_id": "5f2cc1497578a1197a4928c9",
         "roomName": "Hillside Villa views in Beverly Hills Trousdale",
@@ -122,6 +132,7 @@ Sample JSON data:
         "superHost": false,
         "__v": 0
     },
+
     {
         "_id": "5f2cc1497578a1197a4928ca",
         "roomName": "Villa Paullina",
@@ -144,6 +155,7 @@ Sample JSON data:
         "superHost": false,
         "__v": 0
     },
+
     {
         "_id": "5f2cefeae4a69723a0840842",
         "roomName": "$45 Million Ocean View Malibu Mansion Sleeps 14",
@@ -155,6 +167,7 @@ Sample JSON data:
         "superHost": false,
         "__v": 0
     },
+
     {
         "_id": "5f2cefeae4a69723a0840843",
         "roomName": "Elegance at the Beach by stayLA Luxury Rentals",
@@ -166,6 +179,7 @@ Sample JSON data:
         "superHost": false,
         "__v": 0
     },
+
     {
         "_id": "5f2cefeae4a69723a0840844",
         "roomName": "Beachview Malibu Estate near MariSol",
@@ -177,6 +191,7 @@ Sample JSON data:
         "superHost": false,
         "__v": 0
     },
+
     {
         "_id": "5f2cefeae4a69723a0840845",
         "roomName": "Petra Manor | Malibu Luxury Mansion",
@@ -188,6 +203,7 @@ Sample JSON data:
         "superHost": true,
         "__v": 0
     },
+
     {
         "_id": "5f2cefeae4a69723a0840846",
         "roomName": "LOS ANGELES VIEW MODERN ESTATE- POOL- 12,000 SQ FT",
@@ -199,6 +215,7 @@ Sample JSON data:
         "superHost": false,
         "__v": 0
     },
+
     {
         "_id": "5f2cefeae4a69723a0840847",
         "roomName": "Malibu Estate w/ Ocean View, Pool and Amenities",
@@ -210,6 +227,7 @@ Sample JSON data:
         "superHost": false,
         "__v": 0
     },
+
     {
         "_id": "5f2cefeae4a69723a0840848",
         "roomName": "Bel Air Gated 1 acre Ralph Lauren Furnished 1 mthm",
@@ -221,6 +239,7 @@ Sample JSON data:
         "superHost": false,
         "__v": 0
     },
+
     {
         "_id": "5f2cefeae4a69723a0840849",
         "roomName": "Spectacular views",
@@ -232,6 +251,7 @@ Sample JSON data:
         "superHost": true,
         "__v": 0
     },
+
     {
         "_id": "5f2cefeae4a69723a084084a",
         "roomName": "MALIBU PRESIDENTIAL",
@@ -243,6 +263,7 @@ Sample JSON data:
         "superHost": false,
         "__v": 0
     },
+
     {
         "_id": "5f2cefeae4a69723a084084b",
         "roomName": "Hillside Villa views in Beverly Hills Trousdale",
@@ -254,6 +275,7 @@ Sample JSON data:
         "superHost": false,
         "__v": 0
     },
+
     {
         "_id": "5f2cefeae4a69723a084084c",
         "roomName": "Villa Paullina",

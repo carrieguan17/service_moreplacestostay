@@ -3,6 +3,7 @@ Sample JSON data:
 [
     {
         "_id": "5f2cc1497578a1197a4928bf",
+
         "roomName": "IronMan Mansion on Top of Beverly Hills",
         "roomPrice": 10000,
         "type": "Entire villa",

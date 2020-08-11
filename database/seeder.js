@@ -1,4 +1,4 @@
-var Room = require('./database/index_room.js');
+var Room = require('./index.js');
 // var List = require('./database/index_room.js');
 
 var mongoose = require('mongoose');

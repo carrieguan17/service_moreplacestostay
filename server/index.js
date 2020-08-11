@@ -7,9 +7,11 @@ var dbroom = require('../database/index_room.js');
 // var dblist = require('../database/index_list.js')
 // This refers to the module exported at the borrom of index_room.js, which is different from "dbroom" above; the purpose is to use the properties inside the module.
 const Room = require('../database/index_room.js');
+const path = require('path');
+const filePath = path.join(__dirname, '../client/dist')
 
 // middleware
-app.use(express.static('../client/dist'));
+app.use(express.static(filePath));
 app.use(express.json())
 
 // routes (will make a router to direct different routes)
@@ -26,7 +28,6 @@ app.get('/room', (req, res) => {
       res.send(result)
       res.end()
       console.log(`Server get room success`)
-      console.log(result)
     }
   })
 })

@@ -59,7 +59,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <div>Test
+        <div>
           <Display rooms={this.state.rooms} onClickList={this.onClickList} onClickCreate={this.onClickCreate} lists={this.state.lists}/>
         </div>
       </div>

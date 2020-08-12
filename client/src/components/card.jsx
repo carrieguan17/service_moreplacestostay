@@ -18,7 +18,7 @@ class Cards extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      list: this.props.room.savedList
+      list: ''
     };
     this.handleLikeButton = this.handleLikeButton.bind(this);
     this.handleUnlikeButton = this.handleUnlikeButton.bind(this)
@@ -44,7 +44,6 @@ class Cards extends React.Component {
       <div>
       <div className="cards" style={styles.cards}>
         {button}
-        {console.log(this.props.room)}
       </div>
     </div>
     )

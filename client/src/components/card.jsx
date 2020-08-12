@@ -1,16 +1,55 @@
 import React, { useState } from 'react';
 import ListModal from './listmodal.jsx'
 
-var Cards = (props) => {
+function LikeButton(props) {
+  return(
+    <button onClick={props.onClick}>Like</button>
+  )
+}
 
+function UnlikeButton(props) {
   return (
-    <div>
+    <button onClick={props.onClick}>Unlike</button>
+  )
+}
+
+class Cards extends React.Component {
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      list: this.props.room.savedList
+    };
+    this.handleLikeButton = this.handleLikeButton.bind(this);
+    this.handleUnlikeButton = this.handleUnlikeButton.bind(this)
+  }
+
+  handleLikeButton () {
+    this.props.onClickLike(this.props.roomName);
+  }
+
+  handleUnlikeButton () {
+    'todo'
+  }
+
+  render () {
+    var list = this.state.list;
+    let button;
+    if (list === '') {
+      button = <LikeButton onClick={this.handleLikeButton}/>
+    } else {
+      button = <UnlikeButton onClick={this.handleUnlikeButton}/>
+    }
+    return (
+      <div>
       <div className="cards" style={styles.cards}>
-        <button className="openModal" style={styles.openModal} onClick={() => props.onClickLike()}>Like</button>
-        {props.cardNumber}
+        {button}
+        {console.log(this.props.room)}
       </div>
     </div>
-  )
+    )
+  }
+
 }
 
 const styles = {
@@ -29,4 +68,4 @@ const styles = {
   }
 }
 
-export default Cards;
+export default Cards

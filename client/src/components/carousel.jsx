@@ -61,18 +61,18 @@ class Carousel extends React.Component{
           <button onClick={this.handleBackward}>Backward</button>
           <button onClick={this.handleForward}>Forward</button>
           <div ref={refId => this.cardContainer = refId} className="cardContainer" style={styles.cardContainer}>
-            <Cards cardNumber="1" lists={this.props.lists} onClickLike={this.props.onClickLike}/>
-            <Cards cardNumber="2" lists={this.props.lists} onClickLike={this.props.onClickLike}/>
-            <Cards cardNumber="3" lists={this.props.lists} onClickLike={this.props.onClickLike}/>
-            <Cards cardNumber="4" lists={this.props.lists} onClickLike={this.props.onClickLike}/>
-            <Cards cardNumber="5" lists={this.props.lists} onClickLike={this.props.onClickLike}/>
-            <Cards cardNumber="6" lists={this.props.lists} onClickLike={this.props.onClickLike}/>
-            <Cards cardNumber="7" lists={this.props.lists} onClickLike={this.props.onClickLike}/>
-            <Cards cardNumber="8" lists={this.props.lists} onClickLike={this.props.onClickLike}/>
-            <Cards cardNumber="9" lists={this.props.lists} onClickLike={this.props.onClickLike}/>
-            <Cards cardNumber="10" lists={this.props.lists} onClickLike={this.props.onClickLike}/>
-            <Cards cardNumber="11" lists={this.props.lists} onClickLike={this.props.onClickLike}/>
-            <Cards cardNumber="12" lists={this.props.lists} onClickLike={this.props.onClickLike}/>
+            <Cards room={this.props.rooms[0]} lists={this.props.lists} onClickLike={this.props.onClickLike}/>
+            <Cards room={this.props.rooms[1]} lists={this.props.lists} onClickLike={this.props.onClickLike}/>
+            <Cards room={this.props.rooms[2]} lists={this.props.lists} onClickLike={this.props.onClickLike}/>
+            <Cards room={this.props.rooms[3]} lists={this.props.lists} onClickLike={this.props.onClickLike}/>
+            <Cards room={this.props.rooms[4]} lists={this.props.lists} onClickLike={this.props.onClickLike}/>
+            <Cards room={this.props.rooms[5]} lists={this.props.lists} onClickLike={this.props.onClickLike}/>
+            <Cards room={this.props.rooms[6]} lists={this.props.lists} onClickLike={this.props.onClickLike}/>
+            <Cards room={this.props.rooms[7]} lists={this.props.lists} onClickLike={this.props.onClickLike}/>
+            <Cards room={this.props.rooms[8]} lists={this.props.lists} onClickLike={this.props.onClickLike}/>
+            <Cards room={this.props.rooms[9]} lists={this.props.lists} onClickLike={this.props.onClickLike}/>
+            <Cards room={this.props.rooms[10]} lists={this.props.lists} onClickLike={this.props.onClickLike}/>
+            <Cards room={this.props.rooms[11]} lists={this.props.lists} onClickLike={this.props.onClickLike}/>
           </div>
         </div>
       </div>

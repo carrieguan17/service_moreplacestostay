@@ -1,4 +1,5 @@
 import React from 'react';
+import ListItem from './listitem.jsx';
 
 function ListModal (props) {
     return (
@@ -10,7 +11,9 @@ function ListModal (props) {
           <span>Save to a list</span>
         </div>
         <div className="modalContent">
-          test
+          {props.lists.map(function(list) {
+            return <ListItem list={list} onClickList={props.onClickList} closeListModal={props.closeListModal} roomName={props.roomName} showSavedModal={props.showSavedModal}/>
+          })}
         </div>
         <div className="modalFooter">
           <div className="addList" onClick={() => {props.onClickCreateAList()}}>Create a list</div>

@@ -42,12 +42,40 @@ var getAllRooms = function(callback) {
   });
 }
 
+var addToList = function(info, callback) {
+  let roomName = {roomName: info["roomName"]}
+  let savedList = {$set:{savedList: info["listName"]}}
+  console.log(info["listName"])
+  Room.update(roomName, savedList, (err, result) => {
+    if (err) {
+      callback(err)
+      console.log("Error updating rooms")
+    } else {
+      callback(null, result)
+      console.log("Rooms updated")
+    }
+  })
+}
+
+var getAllLists = function(callback) {
+  List.find((err, lists) => {
+    if (err) {
+      callback(err)
+      console.log(`Error getting lists info from DB`)
+    } else {
+      callback(null, lists)
+      console.log(`Success getting lists info from DB`)
+    }
+  });
+}
 
 module.exports = {
   Room: Room,
   dbroom: dbroom,
   List: List,
-  getAllRooms: getAllRooms
+  getAllRooms: getAllRooms,
+  getAllLists: getAllLists,
+  addToList: addToList
 }
 
 

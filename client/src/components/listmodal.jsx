@@ -12,7 +12,7 @@ function ListModal (props) {
         </div>
         <div className="modalContent">
           {props.lists.map(function(list) {
-            return <ListItem list={list} onClickList={props.onClickList} closeListModal={props.closeListModal} roomName={props.roomName} showSavedModal={props.showSavedModal}/>
+            return <ListItem key={list._id} list={list} onClickList={props.onClickList} closeListModal={props.closeListModal} roomName={props.roomName} showSavedModal={props.showSavedModal}/>
           })}
         </div>
         <div className="modalFooter">

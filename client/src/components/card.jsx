@@ -25,15 +25,19 @@ class Cards extends React.Component {
   }
 
   handleLikeButton () {
-    this.props.onClickLike(this.props.roomName);
+    var roomName = this.props.room? this.props.room.roomName : ''
+    var listName = this.props.room? this.props.room.savedList : ''
+    this.props.onClickLike(roomName, listName);
   }
 
   handleUnlikeButton () {
-    'todo'
+    var roomName = this.props.room? this.props.room.roomName : ''
+    var listName = this.props.room? this.props.room.savedList : ''
+    this.props.onClickUnlike(roomName, listName)
   }
 
   render () {
-    var list = this.state.list;
+    var list = this.props.room? this.props.room.savedList : '';
     let button;
     if (list === '') {
       button = <LikeButton onClick={this.handleLikeButton}/>
@@ -42,9 +46,17 @@ class Cards extends React.Component {
     }
     return (
       <div>
-      <div className="cards" style={styles.cards}>
-        {button}
-      </div>
+        <div className="cards" style={styles.cards}>
+          {button}
+          <img  className="media-object" style={styles.mediaObject} src={this.props.room? this.props.room.imageUrl : null} alt="" />
+          <div>Review to do</div>
+          <div>
+            <span className="words" style={styles.words}>{this.props.room? this.props.room.type : null}</span>
+            <span>{this.props.room? this.props.room.numberOfBeds : null} beds</span>
+          </div>
+          <div className="words" style={styles.words}>{this.props.room? this.props.room.roomName : null}</div>
+          <div>${this.props.room? this.props.room.roomPrice : null} / night</div>
+        </div>
     </div>
     )
   }
@@ -54,7 +66,7 @@ class Cards extends React.Component {
 const styles = {
   cards: {
     width: "350px",
-    height: "200px",
+    height: "800px",
     backgroundColor: "blue",
     border: "2px solid black",
     boxSizing: "border-box",
@@ -64,6 +76,17 @@ const styles = {
 
   openModal: {
     cursor: "pointer"
+  },
+
+  mediaObject: {
+    width: "140px",
+    height: "80px",
+    border: "2px solid black",
+    boxSizing: "border-box",
+  },
+
+  words: {
+    fondSize: "0.5em"
   }
 }
 

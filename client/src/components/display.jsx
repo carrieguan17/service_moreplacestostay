@@ -1,21 +1,19 @@
 import React, { useState } from 'react';
-import ListModal from './listmodal.jsx'
+import ListModal from './listmodal.jsx';
 import Carousel from './carousel.jsx';
 import CreateListModal from './createlistmodal.jsx';
-import SavedModal from './savedmodal.jsx'
+import SavedModal from './savedmodal.jsx';
+import RemovedModal from './removedmodal.jsx'
 
 function Display (props) {
 
   // Below are items for ListModal
   const [show, setShow] = useState(false);
-  const [roomName, setName] = useState('');
+  const [roomName, setRoomName] = useState('');
   const closeListModal = () => setShow(false);
-  function onClickLike (name) {
+  function onClickLike (roomName) {
     setShow(true);
-    setName(name);
-  }
-  function onClickUnlike (listName) {
-    // todo
+    setRoomName(roomName);
   }
 
   // Below are items for SavedModal
@@ -24,7 +22,18 @@ function Display (props) {
   const closeSavedModal = () => setSavedShow(false);
   function showSavedModal (listName) {
     setSavedShow(true);
-    setListName(listName)
+    setListName(listName);
+    setTimeout(function(){ closeSavedModal() }, 5000)
+  }
+
+  // Below are items for RemovedModal
+  const [removedShow, setRemovedShow] = useState(false);
+  const closeRemovedModal = () => setRemovedShow(false);
+  function onClickUnlikeRM (roomName, listName) {
+    setRemovedShow(true);
+    setListName(listName);
+    setRoomName(roomName);
+    setTimeout(function(){ closeRemovedModal() }, 5000)
   }
 
   // Below are items for CreateListModal
@@ -37,10 +46,11 @@ function Display (props) {
 
   return (
     <div>
-      <Carousel rooms={props.rooms} onClickLike={onClickLike} onClickUnlike={onClickUnlike}/>
+      <Carousel rooms={props.rooms} onClickLike={onClickLike} onClickUnlike={props.onClickUnlike} onClickUnlikeRM={onClickUnlikeRM}/>
       <ListModal lists={props.lists} show={show} roomName={roomName} closeListModal={closeListModal} onClickList={props.onClickList} showSavedModal={showSavedModal} onClickCreateAList={onClickCreateAList}/>
       <SavedModal savedShow={savedShow} listName={listName} onClickLike={onClickLike} roomName={roomName} closeSavedModal={closeSavedModal}/>
       <CreateListModal createListShow={createListShow} closeCreateListModal={closeCreateListModal} onClickCreate={props.onClickCreate} onClickList={props.onClickList} roomName={roomName}/>
+      <RemovedModal removedShow={removedShow} listName={listName} roomName={roomName} onClickList={props.onClickList} showSavedModal={showSavedModal}/>
     </div>
   )
 }

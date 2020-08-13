@@ -54,8 +54,63 @@ app.get('/list', (req, res) => {
 
 app.post('/room', (req, res) => {
   let info = req.body;
-  console.log(req.body)
   Room.addToList(info, (err, result) => {
+    if (err) {
+      res.status(401)
+      res.send(err)
+    } else {
+      res.status(201)
+      res.send()
+      res.end()
+    }
+  })
+})
+
+app.post('/list', (req, res) => {
+  let info = req.body;
+  List.incList(info, (err, result) => {
+    if (err) {
+      res.status(401)
+      res.send(err)
+    } else {
+      res.status(201)
+      res.send()
+      res.end()
+    }
+  })
+})
+
+app.post('/removeRoom', (req, res) => {
+  let info = req.body;
+  Room.removeRoom(info, (err, result) => {
+    if (err) {
+      res.status(401)
+      res.send(err)
+    } else {
+      res.status(201)
+      res.send()
+      res.end()
+    }
+  })
+})
+
+app.post('/decList', (req, res) => {
+  let info = req.body;
+  List.decList(info, (err, result) => {
+    if (err) {
+      res.status(401)
+      res.send(err)
+    } else {
+      res.status(201)
+      res.send()
+      res.end()
+    }
+  })
+})
+
+app.post('/createList', (req, res) => {
+  let info = req.body;
+  List.createList(info, (err, result) => {
     if (err) {
       res.status(401)
       res.send(err)

@@ -49,25 +49,32 @@ class App extends React.Component {
   }
 
   onClickList (roomName, listName) {
-    console.log(`will write a post request to /room to update the list`)
-    console.log(`will write a post request to /list to update the number of items`)
     axios.post('/room', {'roomName': roomName, 'listName': listName})
     .then(() => {console.log(`Client like list post success`)})
     .catch()
-    // .then(() => {
-    //   axios.post('/list', {'roomName': roomName, 'listName': listName})
-    //   .then(() => {console.log(`Client list update success`)})
-    //   .catch()
-    // })
+    .then(() => {
+      axios.post('/list', {'listName': listName})
+      .then(() => {console.log(`Client list update success`)})
+      .catch()
+    })
   }
 
   onClickUnlike (roomName, listName) {
-    console.log(`will write a post request to /room to update the list`)
-    console.log(`will write a post request to /list to update the number of items`)
+    axios.post('/removeRoom', {'roomName': roomName, 'listName': listName})
+    .then(() => {console.log(`Client remove room from list post success`)})
+    .catch()
+    .then(() => {
+      axios.post('/decList', {'listName': listName})
+      .then(() => {console.log(`Client list update success`)})
+      .catch()
+    })
   }
 
-  onClickCreate () {
+  onClickCreate (listName) {
     console.log(`will write a post request to /list to create a list`)
+    axios.post('/createList', {'listName': listName})
+    .then(() => {console.log(`Client create list success`)})
+    .catch()
   }
 
   render() {

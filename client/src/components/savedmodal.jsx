@@ -4,6 +4,7 @@ function SavedModal (props) {
 
   var handleSubmit = function() {
     props.onClickLike(props.roomName);
+    props.onClickUnlike(props.roomName, props.listName)
     props.closeSavedModal()
   }
 

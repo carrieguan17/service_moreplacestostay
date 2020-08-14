@@ -46,11 +46,21 @@ function Display (props) {
 
   return (
     <div>
-      <Carousel rooms={props.rooms} onClickLike={onClickLike} onClickUnlike={props.onClickUnlike} onClickUnlikeRM={onClickUnlikeRM}/>
-      <ListModal lists={props.lists} show={show} roomName={roomName} closeListModal={closeListModal} onClickList={props.onClickList} showSavedModal={showSavedModal} onClickCreateAList={onClickCreateAList}/>
-      <SavedModal savedShow={savedShow} listName={listName} onClickLike={onClickLike} onClickUnlike={props.onClickUnlike} roomName={roomName} closeSavedModal={closeSavedModal}/>
-      <CreateListModal createListShow={createListShow} closeCreateListModal={closeCreateListModal} onClickCreate={props.onClickCreate} onClickList={props.onClickList} roomName={roomName}/>
-      <RemovedModal removedShow={removedShow} listName={listName} roomName={roomName} onClickList={props.onClickList} showSavedModal={showSavedModal}/>
+      <div>
+        <ListModal lists={props.lists} show={show} roomName={roomName} closeListModal={closeListModal} onClickList={props.onClickList} showSavedModal={showSavedModal} onClickCreateAList={onClickCreateAList}/>
+      </div>
+      <div>
+        <SavedModal savedShow={savedShow} listName={listName} onClickLike={onClickLike} onClickUnlike={props.onClickUnlike} roomName={roomName} closeSavedModal={closeSavedModal}/>
+      </div>
+      <div>
+        <CreateListModal createListShow={createListShow} closeCreateListModal={closeCreateListModal} onClickCreate={props.onClickCreate} onClickList={props.onClickList} roomName={roomName}/>
+      </div>
+      <div>
+        <RemovedModal removedShow={removedShow} listName={listName} roomName={roomName} onClickList={props.onClickList} showSavedModal={showSavedModal}/>
+      </div>
+      <div>
+        <Carousel rooms={props.rooms} onClickLike={onClickLike} onClickUnlike={props.onClickUnlike} onClickUnlikeRM={onClickUnlikeRM}/>
+      </div>
     </div>
   )
 }

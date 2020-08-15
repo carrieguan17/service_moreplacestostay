@@ -132,9 +132,6 @@ const ViewPort = styled.div`
   overflow-x: hidden !important;
   margin-right: -24px !important;
   position: relative !important;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 1140px;
   height: 348.66px;
   backgroundColor: white;
@@ -143,21 +140,6 @@ const ViewPort = styled.div`
     font-weight: 400 !important;
     font-size: 16px !important;
     line-height: 20px !important;
-    --gp-section-compact-padding: 32px !important;
-    --gp-section-compact-padding-condensed: 16px !important;
-    --gp-section-standard-padding: 48px !important;
-    --gp-section-standard-padding-condensed: 24px !important;
-    --dls19-brand-color: #92174D !important;
-    --dls19-ui-brand-color: #92174D !important;
-    --dls19-pdp-listing-title-weight: 400 !important;
-    --dls19-pdp-listing-title-size: 26px !important;
-    --dls19-pdp-listing-title-line-height: 30px !important;
-    --brand-primary: #914669 !important;
-    --brand-active: #773152 !important;
-    --brand-disabled: #E3D4E1 !important;
-    100% ) !important;
-    --dls19-brand-gradient-radial: radial-gradient(circle at center, #BD1E59 0%, #92174D 35%, #861453 50%, #6C0D63 100% ) !important;
-    --dls19-brand-gradient-accent: #BD1E59 !important;
 `;
 
 const CardContainer = styled.div`

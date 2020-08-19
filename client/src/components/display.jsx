@@ -88,6 +88,7 @@ const ModalContainer = styled.div`
   left: 0px !important;
   overflow-y: auto !important;
   opacity: ${(props) => props.show? "0.6" : "0"};
+  z-index: ${(props) => props.show? "5000" : "0"}
 `;
 
 const keyframe = keyframes`

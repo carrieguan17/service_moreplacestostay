@@ -38,7 +38,7 @@ function ListModal (props) {
 }
 
 const ModalWrapper = styled.div`
-  opacity: ${(props) => props.show? "1" : "0"} !important;
+  z-index: 200;
   -webkit-box-align: center !important;
   align-items: center !important;
   padding: 40px !important;
@@ -67,8 +67,6 @@ const ListModalFrame = styled.div `
   flex-direction: column !important;
   box-shadow: rgba(0, 0, 0, 0.28) 0px 8px 28px !important;
   background: rgb(255, 255, 255) !important;
-  opacity: ${(props) => props.show? "1" : "0"} !important;
-  z-index: ${(props) => props.show? "9000" : "0"}
 `;
 
 const CloseModalBtnHolder = styled.span`

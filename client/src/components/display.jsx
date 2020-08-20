@@ -114,6 +114,7 @@ function Display (props) {
 }
 
 const CarouselContainer = styled.div`
+  margin-top: 200px;
   display: block;
   position: relative;
   --page-shell-max-content-width: 1280px;

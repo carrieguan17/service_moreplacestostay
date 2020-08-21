@@ -1,7 +1,7 @@
 // import dependencies
 var express = require('express');
 var app = express();
-var PORT = 3000;
+var PORT = process.env.port || 3000;
 // This refers to the "dbroom" variable defined at the top of index_room.js, which is different from "Room" below; the purpose of importing this variable is to verify whether the server is connected to DB.
 var dbroom = require('../database/index.js');
 // var dblist = require('../database/index_list.js')

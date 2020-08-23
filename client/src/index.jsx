@@ -96,9 +96,9 @@ class Stay extends React.Component {
               <StaticImgHolder src="https://fecmoreplacestostayimages.s3-us-west-1.amazonaws.com/image/static.png"/>
             </StaticConcent>
           </StaticHolder>
-          <div>
+          {/* <div>
             <Topbar data-plugin-in-point-id="display"/>
-          </div>
+          </div> */}
           <Display rooms={this.state.rooms} onClickList={this.onClickList} onClickUnlike={this.onClickUnlike} onClickCreate={this.onClickCreate} lists={this.state.lists} id="display"/>
           <StaticHolder>
           <StaticConcent>

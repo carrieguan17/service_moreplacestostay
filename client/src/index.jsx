@@ -92,12 +92,19 @@ class App extends React.Component {
       <div>
         <div>
           <StaticHolder>
-            <StaticImgHolder src="https://fecmoreplacestostayimages.s3-us-west-1.amazonaws.com/image/static.png"/>
+            <StaticConcent>
+              <StaticImgHolder src="https://fecmoreplacestostayimages.s3-us-west-1.amazonaws.com/image/static.png"/>
+            </StaticConcent>
           </StaticHolder>
           <div>
             <Topbar data-plugin-in-point-id="display"/>
           </div>
           <Display rooms={this.state.rooms} onClickList={this.onClickList} onClickUnlike={this.onClickUnlike} onClickCreate={this.onClickCreate} lists={this.state.lists} id="display"/>
+          <StaticHolder>
+          <StaticConcent>
+            <StaticImgHolder src="https://fecmoreplacestostayimages.s3-us-west-1.amazonaws.com/image/static2.png"/>
+          </StaticConcent>
+          </StaticHolder>
         </div>
       </div>
     )
@@ -105,14 +112,21 @@ class App extends React.Component {
 };
 
 const StaticHolder = styled.div`
+  margin-top: 50px;
   position: relative !important;;
   display: block;
 `;
 
+const StaticConcent = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
 const StaticImgHolder = styled.img`
   position: static !important;
   display: block;
-  width: 100%
+  width: 80%;
 `;
 
 ReactDOM.render(<App/>, document.getElementById('moreplaces'));

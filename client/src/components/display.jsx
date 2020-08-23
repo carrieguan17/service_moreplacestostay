@@ -99,12 +99,6 @@ function Display (props) {
   } else {
     return (
       <div>
-        {/* <div>
-          <Header />
-        </div> */}
-        <div>
-          <Topbar data-plugin-in-point-id="photo"/>
-        </div>
         <CarouselContainer>
           <Carousel rooms={props.rooms} onClickLike={onClickLike} onClickUnlike={props.onClickUnlike} onClickUnlikeRM={onClickUnlikeRM}/>
         </CarouselContainer>

@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import Display from "./components/display.jsx";
+import Topbar from './components/topbar.jsx';
+import styled from 'styled-components';
 
 class App extends React.Component {
   constructor (props) {
@@ -89,11 +91,28 @@ class App extends React.Component {
     return (
       <div>
         <div>
-          <Display rooms={this.state.rooms} onClickList={this.onClickList} onClickUnlike={this.onClickUnlike} onClickCreate={this.onClickCreate} lists={this.state.lists}/>
+          <StaticHolder>
+            <StaticImgHolder src="https://fecmoreplacestostayimages.s3-us-west-1.amazonaws.com/image/static.png"/>
+          </StaticHolder>
+          <div>
+            <Topbar data-plugin-in-point-id="display"/>
+          </div>
+          <Display rooms={this.state.rooms} onClickList={this.onClickList} onClickUnlike={this.onClickUnlike} onClickCreate={this.onClickCreate} lists={this.state.lists} id="display"/>
         </div>
       </div>
     )
   }
 };
+
+const StaticHolder = styled.div`
+  position: relative !important;;
+  display: block;
+`;
+
+const StaticImgHolder = styled.img`
+  position: static !important;
+  display: block;
+  width: 100%
+`;
 
 ReactDOM.render(<App/>, document.getElementById('moreplaces'));

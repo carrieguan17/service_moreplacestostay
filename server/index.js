@@ -108,7 +108,7 @@ app.post('/stay/decList', (req, res) => {
   })
 })
 
-app.post('/place/createList', (req, res) => {
+app.post('/stay/createList', (req, res) => {
   let info = req.body;
   List.createList(info, (err, result) => {
     if (err) {

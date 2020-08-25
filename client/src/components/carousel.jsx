@@ -216,7 +216,6 @@ const Button = styled.div`
   border-style: solid !important;
   border-width: 1px !important;
   border-color: rgba(0, 0, 0, 0.08) !important;
-  transition: box-shadow 0.2s ease 0s, -ms-transform 0.25s ease 0s, -webkit-transform 0.25s ease 0s, transform 0.25s ease 0s !important;
   -webkit-writing-mode: horizontal-tb !important;
   text-rendering: auto;
   letter-spacing: normal;
@@ -232,6 +231,9 @@ const Icon = styled.svg`
   width: 10px;
   display: block;
   fill: currentcolor;
+  ${Button}:hover & {
+    transition: box-shadow 0.2s ease 0s, -ms-transform 0.25s ease 0s, -webkit-transform 0.25s ease 0s, transform 0.25s ease 0s !important;
+  }
 `
 
 

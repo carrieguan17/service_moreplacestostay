@@ -130,7 +130,7 @@ const ListModalContainer = styled.div`
   left: 0px !important;
   overflow-y: auto !important;
   opacity: ${(props) => props.show? "0.6" : "0"};
-  z-index: 100;
+  z-index: 70;
   bottom: ${(props) => props.show? '0px': '-250px'};
   transition: bottom 1.3s ease out;
 `;
@@ -146,7 +146,7 @@ const CreateModalContainer = styled.div`
   left: 0px !important;
   overflow-y: auto !important;
   opacity: ${(props) => props.createListShow? "0.6" : "0"};
-  z-index: 100;
+  z-index: 70;
   transition: bottom 10s ease-out;
 `;
 

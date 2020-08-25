@@ -91,7 +91,6 @@ class Stay extends React.Component {
     return (
       <div>
         <div>
-          <Topbar/>
           <StaticHolder>
             <StaticConcent>
               <StaticImgHolder src="https://fecmoreplacestostayimages.s3-us-west-1.amazonaws.com/image/static.png"/>

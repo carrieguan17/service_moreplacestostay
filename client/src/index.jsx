@@ -97,7 +97,7 @@ class Stay extends React.Component {
             </StaticConcent>
           </StaticHolder>
           <div>
-            <Topbar data-plugin-in-point-id="display"/>
+            <Topbar/>
           </div>
           <Display rooms={this.state.rooms} onClickList={this.onClickList} onClickUnlike={this.onClickUnlike} onClickCreate={this.onClickCreate} lists={this.state.lists} id="display"/>
           <StaticHolder>
